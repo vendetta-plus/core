@@ -29,8 +29,7 @@ abstract class AbstractRoom {
     }
 
     public function getCost($type) {
-        $attr = "_" . $type;
-        return $this->$attr * ($this->getLevel()+1) * ($this->getLevel()+1);
+        return $this->$type * ($this->getLevel()+1) * ($this->getLevel()+1);
     }
 
     public function getPoints() {
