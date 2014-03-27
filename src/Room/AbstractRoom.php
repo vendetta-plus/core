@@ -21,7 +21,7 @@ abstract class AbstractRoom {
         return $this;
     }
 
-    public function getConstructionTime($format = null, $officeLevel, $level = null) {
+    public function getConstructionTime($officeLevel, $level = null) {
         if ($level == null) $level = $this->getLevel()+1;
         $seconds = ceil((pow($level, 2)*$this->duration)/$officeLevel);
 
