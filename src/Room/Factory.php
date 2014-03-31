@@ -16,4 +16,12 @@ class Factory {
 
     }
 
+    public static function createCollection($rooms) {
+        $collection = array();
+        foreach($rooms as $name => $level) {
+            $collection[$name] = self::create($name)->setLevel($level);
+        }
+        return $collection;
+    }
+
 }
