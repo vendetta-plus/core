@@ -36,4 +36,8 @@ abstract class AbstractRoom {
         return $this->points;
     }
 
+    public function getClassName() {
+        return join('', array_slice(explode('\\', get_class($this)), -1));
+    }
+
 }
