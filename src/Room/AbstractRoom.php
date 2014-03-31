@@ -36,6 +36,14 @@ abstract class AbstractRoom {
         return $this->points;
     }
 
+    public function getName() {
+        $re = '/# Match position between camelCase "words".
+        (?<=[a-z])  # Position is after a lowercase,
+        (?=[A-Z])   # and before an uppercase letter.
+        /x';
+        return implode(" ", preg_split($re, $this->getClassName()));
+    }
+
     public function getClassName() {
         return join('', array_slice(explode('\\', get_class($this)), -1));
     }
