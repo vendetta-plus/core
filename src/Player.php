@@ -18,4 +18,9 @@ class Player {
         return $this->buildingModel->getBuildings($this->playerId);
     }
 
+    public function getBuilding($buildingId) {
+        return $this->buildingModel->getBuilding($buildingId, $this->playerId);
+
+    }
+
 }

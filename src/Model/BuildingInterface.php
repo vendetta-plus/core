@@ -8,4 +8,6 @@ interface BuildingInterface {
 
     public function getBuildings($playerId);
 
+    public function getBuilding($buildingId, $playerId);
+
 }
